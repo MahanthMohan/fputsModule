@@ -4,15 +4,15 @@
 #include <unistd.h>
 
 static PyObject *PyfputsMethod(PyObject *self, PyObject *args) {
-	char *data, *filename = NULL
+	char *data, *filename = NULL;
 	int bytesCopied = -1;
 
 	if(!PyArg_ParseTuple(args, "ss", &data, &filename)) {
 		return NULL;
 	}
 
-	FILE *fp = fopen(filename, "w")
-	bytesCopied = fputs(data, fp)
+	FILE *fp = fopen(filename, "w");
+	bytesCopied = fputs(data, fp);
 	fclose(fp);
 
 	return PyLong_FromLong(bytesCopied);
@@ -20,7 +20,7 @@ static PyObject *PyfputsMethod(PyObject *self, PyObject *args) {
 
 // Declares the Method properties and docstring
 static PyMethodDef FputsMethods[] = {
-	{"fputs", PyfputsMethod, METH_VARARGS, "Python Interface for fputs C library function"}
+	{"fputs", PyfputsMethod, METH_VARARGS, "Python Interface for fputs C library function"},
 	{NULL, NULL, 0, NULL}
 };
 
