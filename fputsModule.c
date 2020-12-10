@@ -1,7 +1,4 @@
 #include <Python.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 static PyObject *PyfputsMethod(PyObject *self, PyObject *args) {
 	char *data, *filename = NULL;
