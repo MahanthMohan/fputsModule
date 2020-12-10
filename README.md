@@ -1,10 +1,10 @@
-# fputs
+# fputsModule
 
 ## Description
 A simple package that extends the fputs C library function to Python, with the help of the Python C API
 
 ## Documentation (Methods)
-`fputs(data, filename)`
+`fputs(data, filename)`\
 A method that takes in 2 parameters - data and filename, to write data in the specified file
 
 ## Credits
